@@ -15,7 +15,7 @@ interface Room {
   images: string[]
 }
 
-const roomData: Room[] = {
+const roomData: Record<string, Room> = {
   "living-room": {
     id: "living-room",
     name: "Living Room",
@@ -75,6 +75,24 @@ const roomData: Room[] = {
     name: "Bathroom 3",
     description: "Full bathroom",
     images: ["/images/PHOTO-2025-08-02-09-13-44.jpg"],
+  },
+  "front-yard": {
+    id: "front-yard",
+    name: "Front Yard",
+    description: "Craftsman character home with original details",
+    images: ["/images/bb94dd99-f8e1-4d09-9f62-867b97158051.jpeg","/images/IMG_2489.jpeg", "/images/IMG_2559.jpeg","/images/IMG_6952.jpeg"],
+  },
+  "back-yard": {
+    id: "back-yard",
+    name: "Back Yard",
+    description: "Play area for kids and outdoor space",
+    images: ["/images/IMG_6976.jpeg","/images/IMG_6971.jpeg"],
+  },
+  "driveway": {
+    id: "driveway",
+    name: "Parking",
+    description: "Driveway for 1-2 vehicles plus street parking",
+    images: ["/image.png"],
   },
 }
 
@@ -162,7 +180,7 @@ export default function HomePage() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
               <Home className="h-6 w-6 text-blue-600" />
-              <span className="text-lg font-semibold text-gray-900">Cook St Village</span>
+              <span className="text-lg font-semibold text-gray-900">Nook on Cook</span>
             </div>
             <div className="flex space-x-8">
               <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">
@@ -265,44 +283,27 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Exterior</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card>
-              <CardContent className="p-6">
-                <div className="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-center text-gray-500">
-                    <Home className="h-8 w-8 mx-auto mb-2" />
-                    <p className="text-sm">Front Yard</p>
-                  </div>
-                </div>
-                <h3 className="font-semibold text-gray-900">Front Yard</h3>
-                <p className="text-gray-600 text-sm">Craftsman character home with original details</p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6">
-                <div className="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-center text-gray-500">
-                    <Home className="h-8 w-8 mx-auto mb-2" />
-                    <p className="text-sm">Back Yard</p>
-                  </div>
-                </div>
-                <h3 className="font-semibold text-gray-900">Back Yard</h3>
-                <p className="text-gray-600 text-sm">Play area for kids and outdoor space</p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6">
-                <div className="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-center text-gray-500">
-                    <Home className="h-8 w-8 mx-auto mb-2" />
-                    <p className="text-sm">Driveway</p>
-                  </div>
-                </div>
-                <h3 className="font-semibold text-gray-900">Parking</h3>
-                <p className="text-gray-600 text-sm">Driveway for 1-2 vehicles plus street parking</p>
-              </CardContent>
-            </Card>
+            <RoomCard
+              roomId="front-yard"
+              title="Front Yard"
+              description="Craftsman character home with original details"
+              mainImage="/images/bb94dd99-f8e1-4d09-9f62-867b97158051.jpeg"
+              icon={<Home className="h-8 w-8" />}
+            />
+            <RoomCard
+              roomId="back-yard"
+              title="Back Yard"
+              description="Play area for kids and outdoor space"
+              mainImage="/images/IMG_6971.jpeg"
+              icon={<Home className="h-8 w-8" />}
+            />
+            <RoomCard
+              roomId="driveway"
+              title="Parking"
+              description="Driveway for 1-2 vehicles plus street parking"
+              mainImage="/image.png"
+              icon={<Home className="h-8 w-8" />}
+            />
           </div>
         </div>
       </section>
