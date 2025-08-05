@@ -4,8 +4,8 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-title: 'METAWHO MORE LIKE METAWHAT',
-  description: 'blah blah blah',
+title: 'open-bnb - Create a stunning vacation rental website in minutes.',
+  description: 'open-bnb is the easiest way to build a professional website for your vacation rental. No coding required.',
 }
 
 export default function RootLayout({
