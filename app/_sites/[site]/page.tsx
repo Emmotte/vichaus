@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import SitePreview from '@/components/site-preview';
+import SitePreview from '@/app/site/site-preview';
 
 const MOCK_DB = {
   'nook-on-cook': {
@@ -8,7 +8,7 @@ const MOCK_DB = {
   },
   'another-site': {
     siteName: 'Another Site',
-    siteDescription: 'Another Description',
+    siteDescription: 'Another Description',   
   },
 };
 

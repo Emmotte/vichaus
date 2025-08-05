@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -33,9 +32,17 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+    --purple: 260 60% 50%;
+    --purple-foreground: 260 60% 98%;
+    --green: 120 60% 40%;
+    --green-foreground: 120 60% 98%;
   }
 
   .dark {
+    --purple: 260 60% 70%;
+    --purple-foreground: 260 60% 10%;
+    --green: 120 60% 60%;
+    --green-foreground: 120 60% 10%;
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -64,11 +71,70 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
-}
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+    }
+    body {
+      background-color: hsl(var(--background));
+    }
+    html {
+      color-scheme: dark;
+    }
+    body, input, textarea, select, button {
+      color: hsl(var(--foreground));
+    }
+    a {
+      color: hsl(var(--primary));
+    }
+    a:hover {
+      color: hsl(var(--primary-foreground));
+    }
+    .bg-gray-100 {
+      background-color: hsl(var(--background));
+    }
+    .text-gray-900 {
+      color: hsl(var(--foreground));
+    }
+    .border-gray-700 {
+      border-color: hsl(var(--border));
+    }
+    .bg-gray-900 {
+      background-color: hsl(var(--card));
+    }
+    .text-white {
+      color: hsl
+    }
 
 @layer base {
   body {
-    @apply bg-background text-foreground;
+    border-color: hsl(var(--border));
   }
 }
 
@@ -94,4 +160,4 @@
 
 .animate-float-delay-2 {
   animation: float 6s ease-in-out infinite 2s;
-}
+}}
