@@ -45,7 +45,7 @@ export default function LandingPage() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link
-                    href="/login"
+                    href="/dashboard"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     prefetch={false}
                   >
@@ -62,21 +62,21 @@ export default function LandingPage() {
               </div>
               <div className="relative w-full h-full">
                 <Image
-                  src="/images/IMG_6971.jpeg"
+                  src="/images/herosite.png"
                   width="550"
                   height="550"
                   alt="Hero"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square animate-float"
                 />
                 <Image
-                  src="/images/IMG_6976.jpeg"
+                  src="/images/roomshowcase.png"
                   width="550"
                   height="550"
                   alt="Hero"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square animate-float-delay-1"
                 />
                 <Image
-                  src="/images/IMG_2489.jpeg"
+                  src="/images/contact&about-hoost.png"
                   width="550"
                   height="550"
                   alt="Hero"
@@ -103,7 +103,7 @@ export default function LandingPage() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <Image
-                src="/images/living-room.png"
+                src="/images/image.png"
                 width="550"
                 height="310"
                 alt="Feature"
